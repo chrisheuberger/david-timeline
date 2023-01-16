@@ -1,51 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>David's Timeline</title>
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet">
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all" rel="stylesheet">
-    <link href="css/styles.css" media="all" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-  </head>
-  <body>
-    <div class="header-container">
-      <h1 class="page-header">The Life and Times of<br>Mr. David Howard Ferrin</h1>
-      <p>This is a record of the life of the valiant David Ferrin (born April 9, 2021) of Portland, OR. Each year he (or his parents) filled out the form below. The result is a timeline that's part journal, part time capsule, and part photo album, begun at the beginning, by his uncle <a class="header-link" href="mailto:chrisheuberg@gmail.com">Bup</a>.</p>
-    </div>
-    <div class="timeline animated">
 
-      <div class="timeline-row">
-        <div class="timeline-time">
-          <small>turned 1</small>2021
+<head>
+  <title>David’s Timeline</title>
+  <link href="css/styles.css" media="all" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+</head>
+
+<body>
+  <div class="header-container">
+    <h1 class="page-header">The Life and Times of<br>Mr. David Howard Ferrin</h1>
+    <p>This is a record of the life of the valiant David Ferrin (born April 9, 2021) of Portland, OR. Each year he (or his parents) filled out the form below. The result is a timeline that's part journal, part time capsule, and part photo album, begun at the beginning, by his <a class="header-link" href="https://www.chrisheuberger.com" target="_blank">Uncle Bup</a>.</p>
+  </div>
+
+  <div class="block">
+    <img class="timeline-img" src="img/david-1.jpg" />
+    <div class="text-panel">
+      <div class="date">
+        <h3 class="date-header">2021 &#8212; turned 1</h3>
+      </div>
+      <div class="highlights">
+        <h2 class="highlights-header">Baby Always Happy</h2>
+        <h4 class="highlights-subheader">year one highlights</h4>
+        <ul>
+          <li>achievement<span class="answer">standing up by himself clapping waving crawling</span></li>
+          <li>favorite<span class="answer">yellow blanket</span></li>
+          <li>thankful for<span class="answer">two sisters</span></li>
+          <li>adventure<span class="answer">Black Butte</span></li>
+          <li>working on it<span class="answer">walking</span></li>
+        </ul>
+        <blockquote>
+          <hr class="quote-hr" />
+          <p class="quote">dadadada</p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    <div class="block">
+      <img class="timeline-img" src="img/david-X.jpg" />
+      <div class="text-panel">
+        <div class="date">
+          <h3 class="date-header">20XX &#8212; turned X</h3>
         </div>
-        <div class="timeline-icon">
-          <div class="bg-primary">
-            <i class="fa fa-asterisk"></i>
-          </div>
-        </div>
-        <div class="panel timeline-content">
-          <div class="panel-body">
-            <h2 class="entry-header">Baby Always Happy</h2>
-            <h5 class="year-subhead">year one highlights</h5>
-            <img class="img-responsive" src="img/david-1.jpg" />
-            <ul>
-              <li>achievement<span class="answerspan">standing up by himself clapping waving crawling</span></li>
-              <li>favorite<span class="answerspan">yellow blanket</span></li>
-              <li>thankful for<span class="answerspan">two sisters</span></li>
-              <li>adventure<span class="answerspan">Black Butte</span></li>
-              <li>working on it<span class="answerspan">walking</span></li>
-            </ul>
-            <blockquote>
-              <p class="quote">dadadada</p>
-            </blockquote>
-          </div>
+        <div class="highlights">
+          <h2 class="highlights-header">XXX</h2>
+          <h4 class="highlights-subheader">XXX</h4>
+          <ul>
+            <li>achievement<span class="answer">XXX</span></li>
+            <li>favorite<span class="answer">XXX</span></li>
+            <li>thankful for<span class="answer">XXX</span></li>
+            <li>adventure<span class="answer">XXX</span></li>
+            <li>working on it<span class="answer">XXX</span></li>
+          </ul>
+          <blockquote>
+            <hr class="quote-hr" />
+            <p class="quote">XXX</p>
+          </blockquote>
         </div>
       </div>
-      
     </div>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    -->
+
+  <div class="end-note-spacer"></div>
+  <p class="end-note">carpe diem</p>
+
+  <div class="progress-pie-chart"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

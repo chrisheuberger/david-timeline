@@ -1,20 +1,43 @@
-(function() {
-  $(document).ready(function() {
-    var timelineAnimate;
-    timelineAnimate = function(elem) {
-      return $(".timeline.animated .timeline-row").each(function(i) {
-        var bottom_of_object, bottom_of_window;
-        bottom_of_object = $(this).position().top + $(window).height()/2;
-        bottom_of_window = $(window).scrollTop() + $(window).height();
-        if (bottom_of_window > bottom_of_object) {
-          return $(this).addClass("active");
-        }
+gsap.registerPlugin(ScrollTrigger);
+
+$(window).on("load resize",function(e) {
+  
+  // for each block, fade image in near the bottom and out near the top
+  ScrollTrigger.matchMedia({
+    "screen and (min-width: 768px)": function () {
+      let blocks = gsap.utils.toArray(".block");
+
+      blocks.forEach((elem, i) => {
+
+        let trigger = elem.querySelector(".text-panel");
+        let images = elem.querySelector("img");
+
+        const tl = gsap.timeline({ 
+          scrollTrigger: {
+            trigger: trigger,
+            start: "top 60%",
+            end: "bottom 40%",
+            scrub: true,
+            // markers: true,
+            toggleActions: "play reverse play reverse",
+          }
+        });
+
+        tl
+          .to(images, { opacity: 1, duration: 0.2, stagger: 0.1 })
+          .to(images, { opacity: 0, duration: 0.2, stagger: 0.1 }, 0.8 );
+
       });
-    };
-    timelineAnimate();
-    return $(window).scroll(function() {
-      return timelineAnimate();
-    });
+    }
   });
 
-}).call(this);
+  // progress pie chart
+  gsap.to(".progress-pie-chart", {
+    "--p": '100%',
+    ease: 'none',
+    scrollTrigger: { 
+      scrub: 0.3 
+    }
+  });
+
+});
