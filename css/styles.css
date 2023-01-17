@@ -1,37 +1,25 @@
 /* base */
 
-@font-face {
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(https://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 600;
-  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(https://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGCmgpmuQqK2I-L2S9cF65Ek.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(https://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGIqjGYJUyOXcBwUQbRaNH6c.woff) format("woff");
-}
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@1,300&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 :root {
-  --page-bg: #e9f0f5;
-  --bg-color-1: MediumSeaGreen;
-  --bg-color-2: MediumAquamarine;
-  --text-color: #2c3e50;
-  --text-color-2: MediumSeaGreen;
-  --text-color-3: MediumAquamarine;
-  --text-color-4: slategray;
-  --text-color-5: MediumVioletRed;
-  --a-color: #2c3e50;
-  --a-hover-color: MediumSeaGreen;
+  --page-bg: #f2fff2;
+  --bg-color-1: #082927;
+  --bg-color-2: #073330;
+  --page-header-color: #e6bac7;
+  --page-subheader-color: #ed3a1a;
+  --page-header-a-color: #e6bac7;
+  --page-header-a-hover-color: MediumVioletRed;
+  --date-header-color: #ed3a1a;
+  --highlights-header-color: #073330;
+  --highlights-subheader-color: #1c6b66;
+  --highlights-border-color: #719691;
+  --li-color: #719691;
+  --text-color: #073330;
+  --quote-color: MediumVioletRed;
+  --end-note-color: #719691;
+  --progress-color-1: #1c6b66;
+  --progress-color-2: #719691;
 }
 
 html {
@@ -55,7 +43,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem 0;
   padding: 0;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-color);
 }
 
@@ -80,70 +68,100 @@ p {
   color: var(--text-color);
 }
 
-a {
-  color: var(--a-color);
-}
-
-a:hover {
-  color: var(--a-hover-color);
-}
-
-ul {
-  margin: 2rem 0;
-  padding: 0;
-}
-
-li {
-  margin: 1rem 0 0 0;
-  padding: 0;
-  list-style: none;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: var(--text-color-4);
-}
-
 /* header */
 
 .header-container {
   position: relative;
   z-index: 10;
-  width: calc(100% - 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   margin: 0 auto 2rem auto;
-  text-align: center;
+  background: var(--bg-color-1);
 }
 
 @media only screen and (min-width: 768px) {
   .header-container {
-    width: 80%;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: row;
+    background: linear-gradient(90deg, var(--bg-color-1) 0, var(--bg-color-1)  50%, var(--bg-color-2) 50%, var(--bg-color-2) 100%);
   }
 }
 
 .page-header {
-  margin: 1rem 0;
+  margin: 2rem 2rem 0 2rem;
   padding: 0;
-  color: var(--text-color-2);
+  font-family: 'Aleo', monospace; 
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--page-header-color);
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (min-width: 540px) {
   .page-header {
-    font-size: 2.5rem;
+    font-size: 70px;
   }
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (min-width: 768px) {
   .page-header {
-    font-size: 2rem;
+    width: 50%;
+    margin-bottom: 2rem;
+    font-size: 90px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .page-header {
+    font-size: 100px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .page-header {
+    font-size: 110px;
+  }
+}
+
+.page-subheader {
+  margin: 2rem;
+  padding: 0;
+  font-size: 20px;
+  color: var(--page-subheader-color);
+}
+
+@media only screen and (min-width: 540px) {
+  .page-subheader {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-subheader {
+    width: 50%;
+    margin: 2rem 2rem 2rem 4rem;
+    font-size: 36px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .page-subheader {
+    font-size: 40px;
   }
 }
 
 .header-link {
-  color: var(--a-color);
+  color: var(--page-header-a-color);
 }
 
 .header-link:hover {
-  color: var(--a-hover-color);
+  color: var(--page-header-a-hover-color);
 }
+
 /* timeline */
 
 .block {
@@ -180,7 +198,7 @@ li {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1;
-  color: var(--text-color-4);
+  color: var(--date-header-color);
 }
 
 .highlights {
@@ -189,19 +207,38 @@ li {
 
 .highlights-header {
   margin-bottom: 0.5rem;
-  color: var(--text-color-2);
+  color: var(--highlights-header-color);
 }
 
 .highlights-subheader {
   font-size: 1rem;
   font-style: italic;
   font-weight: 400;
-  color: var(--text-color-3);
+  color: var(--highlights-subheader-color);
+}
+
+.highlights ul {
+  margin: 2rem 0;
+  padding: 0 0 0 1rem;
+  border-left: 1px solid var(--highlights-border-color);
+}
+
+.highlights li {
+  margin: 1rem 0 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--li-color);
 }
 
 .answer {
   display: block;
   font-size: 1.2rem;
+  text-transform: none;
+  letter-spacing: normal;
   color: var(--text-color);
 }
 
@@ -213,16 +250,10 @@ blockquote {
   margin-top: 3rem;
 }
 
-.quote-hr {
-  width: 100px;
-  margin: 0 0 1rem 0;
-  border-top: 1px solid var(--text-color-5);
-}
-
 .quote {
   margin-bottom: 0;
   font-style: italic;
-  color: var(--text-color-5);
+  color: var(--quote-color);
 }
 
 .end-note-spacer {
@@ -231,6 +262,7 @@ blockquote {
 
 .end-note {
   margin: 1rem;
+  color: var(--end-note-color);
 }
 
 /* progress pie chart */
@@ -243,5 +275,5 @@ blockquote {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: conic-gradient(var(--bg-color-1) var(--p, 0), 0, var(--bg-color-2));
+  background: conic-gradient(var(--progress-color-1) var(--p, 0), 0, var(--progress-color-2));
 }
