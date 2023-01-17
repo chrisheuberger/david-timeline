@@ -16,7 +16,7 @@
   --highlights-border-color: #719691;
   --li-color: #719691;
   --text-color: #073330;
-  --quote-color: MediumVioletRed;
+  --quote-color: #2ed19b;
   --end-note-color: #719691;
   --progress-color-1: #1c6b66;
   --progress-color-2: #719691;
@@ -80,6 +80,8 @@ p {
   width: 100%;
   margin: 0 auto 2rem auto;
   background: var(--bg-color-1);
+  overflow: hidden;
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -88,6 +90,23 @@ p {
     min-height: 100vh;
     flex-direction: row;
     background: linear-gradient(90deg, var(--bg-color-1) 0, var(--bg-color-1)  50%, var(--bg-color-2) 50%, var(--bg-color-2) 100%);
+  }
+}
+
+.diagonal {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to left top, var(--bg-color-2) 0%, var(--bg-color-2) 50%, transparent 50%);
+}
+
+@media only screen and (min-width: 768px) {
+  .diagonal {
+    display: none;
   }
 }
 
@@ -181,6 +200,15 @@ p {
 
 .timeline-img {
   width: 100%;
+  height: 0;
+  padding-bottom: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.timeline-img_1 {
+  background-image: url("../img/david-1.jpg");
 }
 
 @media only screen and (min-width: 768px) {
@@ -191,15 +219,31 @@ p {
     left: 50%;
     transform: translateY(-50%);
     width: 50%;
+    height: 100vh;
+    padding-bottom: 0;
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .text-panel {
+    margin: 0 2rem;
+  }
+}
+
+
 .date-header {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
+  margin-top: 1rem;
   text-transform: uppercase;
   letter-spacing: 1;
   color: var(--date-header-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .date-header {
+    margin-top: 0;
+  }
 }
 
 .highlights {
@@ -208,6 +252,11 @@ p {
 
 .highlights-header {
   margin-bottom: 0.5rem;
+  font-family: 'Aleo', monospace; 
+  font-size: 40px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1;
   color: var(--highlights-header-color);
 }
 
@@ -237,7 +286,7 @@ p {
 
 .answer {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-transform: none;
   letter-spacing: normal;
   color: var(--text-color);

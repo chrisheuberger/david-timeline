@@ -10,7 +10,7 @@ $(window).on("load resize",function(e) {
       blocks.forEach((elem, i) => {
 
         let trigger = elem.querySelector(".text-panel");
-        let images = elem.querySelector("img");
+        let images = elem.querySelector(".timeline-img");
 
         const tl = gsap.timeline({ 
           scrollTrigger: {
