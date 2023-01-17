@@ -97,6 +97,7 @@ p {
   font-family: 'Aleo', monospace; 
   font-size: 50px;
   font-weight: 300;
+  font-style: italic;
   line-height: 1;
   color: var(--page-header-color);
 }
