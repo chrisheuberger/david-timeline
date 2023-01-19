@@ -1,5 +1,5 @@
 # david-timeline
-A timeline for my other niece
+A timeline for my nephew.
 
 [http://chrisbup.github.io/david-timeline](http://chrisbup.github.io/david-timeline)
 
