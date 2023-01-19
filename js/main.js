@@ -32,16 +32,16 @@ $(window).on("load resize",function(e) {
   });
 
   // display progress pie chart only when hero has cleared it
-  gsap.to(".progress-pie-chart", { 
-    scrollTrigger: {
-      trigger: ".header-container",
-      start: "bottom bottom-=75",
-      // markers: true,
-      toggleActions: "play none play reverse",
-    },
-    opacity: 1,
-    duration: 0.2
-  });
+  // gsap.to(".progress-pie-chart", { 
+  //   scrollTrigger: {
+  //     trigger: ".header-container",
+  //     start: "bottom bottom-=75",
+  //     // markers: true,
+  //     toggleActions: "play none play reverse",
+  //   },
+  //   opacity: 1,
+  //   duration: 0.2
+  // });
 
   // update progress pie chart
   gsap.to(".progress-pie-chart", {
