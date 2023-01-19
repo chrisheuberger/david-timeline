@@ -211,6 +211,10 @@ p {
   background-image: url("../img/david-1.jpg");
 }
 
+.timeline-img_2 {
+  background-image: url("../img/david-2.jpg");
+}
+
 @media only screen and (min-width: 768px) {
   .timeline-img {
     opacity: 0;
@@ -318,6 +322,7 @@ blockquote {
 /* progress pie chart */
 
 .progress-pie-chart {
+  opacity: 0;
   --p: 0;
   position: fixed;
   bottom: 1rem;
